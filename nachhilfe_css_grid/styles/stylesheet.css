@@ -1,0 +1,242 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Homepagetitel: XXX */
+/* Autor: XXX, Datum: XX.XX.XXXX */
+
+	
+
+
+/* ############################### Globale Einstellungen ############################### */
+
+html {scroll-behavior: smooth;}
+
+.logo, nav a {    
+    transition: all 350ms; 
+    -webkit-transition: all 350ms; /* Browser-Support für Transition */
+    -moz-transition: all 350ms;    /* Browser-Support für Transition */
+    -o-transition: all 350ms;      /* Browser-Support für Transition */
+    } /* Für ÜBERGANG Brudiiii */
+
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	font-size: 100%;
+	font-weight: normal;}
+
+body {
+    background: url(../medien/space.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+} /* Bild im Hintergrund (Body) verlinken */
+
+#wrapper {
+        background-color:#ccc;
+        height: auto;
+        max-width: 1200px;
+        margin: 5em auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.3fr auto 2fr 0.7fr; /* Titelbild = auto, damit nicht zu viel Platz bleibt, wenn es wieder Lücke, dann fr anpassen */
+        /* Ändern der Größenangaben hat Auswirkung auf fr, z.B. Lücken - in solchen Fällen Größenangaben beim Element oder die fr anpassen */
+        grid-template-areas: 
+            "header header header"
+            "titelbild titelbild titelbild"
+            "main main sidebar"
+            "footer footer footer"
+}
+
+img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+a {text-decoration: none;
+    color: #000;
+}
+
+/* Header ##################### */
+
+header {
+        background-color: #89dbff;
+        grid-area: header;
+}
+
+.logo {
+        width: 20em;
+        margin: 2em 0 0 2em;
+        display: inline-block;
+}
+
+.logo:hover {opacity: 0.5;}
+
+nav ul li {
+    display: inline;
+    list-style-type: none;
+    padding-left: 0.5em;
+    font-family: 'alegreyabold';
+    font-size: 1.6em;
+}
+
+
+
+nav ul li a:hover {color: #ffffff;}
+
+nav {
+    float: right; /* nach rechts schweben lassen */
+    padding-right: 2em;
+    }
+
+.nav_header {padding-top: 2.3em;}
+
+.nav_footer {padding-top: 4.3em;}
+
+/* Selektoren: mit komma ist eine Aufzählung. Ohne Komma nacheinander ist eine Wegbeschreibung 
+
+address, address a, nav a {color: brown;} ------------
+
+*/
+
+/* titelbild ##################### */
+
+.titelbild {
+        background-color: #d29eff;
+        grid-area: titelbild;
+}
+
+/* Content ##################### */
+
+.main {
+        background-color: #d29eff;
+        grid-area: main;
+}
+
+.sidebar {
+        background-color: #fffb9e;
+        grid-area: sidebar;
+}
+
+.main {
+    padding: 3em;
+}
+
+.profil {
+    display: block;
+    margin: 3em auto;
+    width: 20em;
+}
+
+.profil img {
+        padding-top: 0.5em;
+        border-radius: 1em;
+        }
+
+.profil p {
+        padding-top: 2em;
+        font-family: 'abhaya_libreregular';   
+        font-size: 1.3em; 
+}
+
+/* Footer ##################### */
+
+footer {
+        background-color: #9effa5;
+        grid-area: footer;
+}
+
+address {
+        display: inline-block;
+        padding: 2em;
+        font-size: 1.3em;
+}
+
+/* Schriftformate ##################### */
+
+h3 {
+    font-size: 1.3em;
+    font-family: 'open_sansbold';}
+
+p {font-family: "open_sansregular";}
+
+
+
+/* Hauptboxen ##################### 
+
+#wrapper {
+	background-color:#ccc;
+	height: auto;
+	max-width: 900px;
+	margin: 5em auto;
+	}
+
+*/
+
+
+
+
+/* Mobile Anpassung ##################### */
+
+
+@media screen and (max-width:900px) {
+
+
+#wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr auto 2fr 2fr 0.5fr; /* Titelbild = auto, damit nicht zu viel Platz bleibt */
+        grid-template-areas: 
+            "header"
+            "titelbild"
+            "main"
+            "sidebar"
+            "footer"
+}
+
+    .logo {
+            display: block;
+            margin: 2em auto;
+        }
+
+    .profil {
+            display: block; /* zentrierte divs immer als block */
+            margin: 5em auto; /* oben 5em Außenabstand, andere Seiten automatisch */
+            width: 30em; 
+            text-align: center; /* zentriert nur den Text */
+            }
+
+
+    nav {
+        float: none; /* float nach rechts deaktivieren (von desktop-ansicht) */
+}
+    
+    nav ul li {
+            display: block;
+            text-align: center;
+            margin: auto;
+            padding-bottom: 1em; /* Innenabstand nach unten */
+} /* Navigation zentrieren, bzw die Listelemente */
+
+
+    address {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+

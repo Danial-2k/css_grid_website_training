@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<title>&Uuml;bung Grid Area</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles/stylesheet.css"> <!-- css datei -->
+    <!-- Auf keinen Fall fonts/stylesheet verlinkung vergessen! -->
+    <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/medien/favicon.png"> <!-- icon im tab oben -->
+</head>
+<body>
+	<div id="wrapper">
+
+        <header id="header">
+            <!-- der a tag ist der link zum klicken, der img tag nur das bild -->
+            <a href="index.html"><img class="logo" src="medien/logo.png"></a>
+            <nav class="nav_header"> <!-- img innerhalb von a = Bild als Link -->
+                <ul>
+                    <!-- href = wohin es gehen soll. -->
+                    <!-- Weißer Text = sichtbarer Teil (zwischen den a-tags) -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#content">Content</a></li> <!-- spring zur ID namens content -->
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="titelbild">
+            <img src="medien/titelbild.jpg">
+        </div>
+        
+        
+        <article class="main" id="content"> <!-- IDs können bei links (a) benutzt werden -->
+            <h3>Der Inhalt</h3>
+
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+        </article>
+
+        <article class="sidebar">
+            
+            <div class="profil">
+                <h3>Le Boss</h3>
+                <img src="medien/mario.jpg">
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+            </p>
+            </div>
+            
+        </article>
+        
+
+
+        <footer id="kontakt">
+            <address>
+                <p>
+                Schmubi Dubi<br>
+                Schmulistraße 11<br>
+                12345 Schmu-City <br>
+                <a href="tel:021661234567">(021 66) 123 4567</a><br>
+                <a href="mailto:schmu@gmx.de">schmu@gmx.de</a><br>
+                </p>
+            </address>
+            
+            <nav class="nav_footer">
+                <ul>
+                    <!-- DSGVO/Impressum, Skiplink = spricht ID mit # an -->
+                    <!-- href - ordner wählen -->
+                    <li><a href="sites/dsgvo.html">DSGVO</a></li>
+                    <li><a href="sites/impressum.html">Impressum</a></li>
+                    <li><a href="#header">Zur&uuml;ck</a></li>
+                </ul>
+            </nav>
+
+        </footer>
+
+	</div> <!-- wrapper zu -->
+
+</body>
+</html>
